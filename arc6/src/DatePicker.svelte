@@ -1,6 +1,9 @@
 <script>
  export let date;
+ import timeStore from './timeStore';
 
+ $: today = ($timeStore).toISOString().substring(0, 10)
+     // let today = (new Date()).toISOString().substring(0, 10)
  let today = (new Date()).toISOString().substring(0, 10);
  
 </script>

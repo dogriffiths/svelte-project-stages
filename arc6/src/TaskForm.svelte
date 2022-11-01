@@ -1,22 +1,25 @@
 <script>
  import {createEventDispatcher} from 'svelte';
  import DatePicker from './DatePicker.svelte';
+ import timeStore from './timeStore';
 
  const dispatch = createEventDispatcher();
 
- $: formDisabled = !name || !dueDate || (dueDate < today)
-
  let name = "";
  let dueDate;
- let today = (new Date()).toISOString().substring(0, 10)
-     function onAdd() {
-         dispatch('submit', {      
-             name: name,
-             dueDate: dueDate,
-         });
-         name = "";
-         dueDate = null;
-     }
+ $: today = ($timeStore).toISOString().substring(0, 10);
+ // let today = (new Date()).toISOString().substring(0, 10)
+
+ $: formDisabled = !name || !dueDate || (dueDate < today);
+
+ function onAdd() {
+     dispatch('submit', {      
+         name: name,
+         dueDate: dueDate,
+     });
+     name = "";
+     dueDate = null;
+ }
 </script>
 
 <div class="TaskForm">
