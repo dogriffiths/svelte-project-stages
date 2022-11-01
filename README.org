@@ -1,0 +1,20 @@
+#+TITLE: Task App Development Stages
+
+Each folder is a different stage of the Svelte task-app during the Svelte Fundamentals course.
+* To run the code
+
+Change into the directory, type
+
+=npm install=
+
+Then start the application with
+
+=npm run dev=
+
+To build a compressed version of the code in =public/build=, type
+
+=npm run build=
+
+To run the tests
+
+=npm run test=
