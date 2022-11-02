@@ -1,1 +1,3 @@
 Create a test
+
+For instructions on how to add testing configuration to a Svelte application, see https://gist.github.com/dogriffiths/c719952abf03bfb95adb4497aed52ed2
